@@ -46,6 +46,7 @@ jobs:
           keys:
             - "npm-packages"
       - run: npm audit
+      - run: npm audit fix
 
 
 # Invoke jobs via workflows
