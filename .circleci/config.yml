@@ -34,6 +34,9 @@ jobs:
           name: install cached packages
           command: npm i
       - run:
+          name: audit packages
+          command: npm audit fix
+      - run:
           name: Run Tests
           command: npm run test
 
@@ -46,7 +49,6 @@ jobs:
           keys:
             - "npm-packages"
       - run: npm audit
-      - run: npm audit fix
 
 
 # Invoke jobs via workflows
